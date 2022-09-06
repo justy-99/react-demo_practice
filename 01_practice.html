@@ -4,11 +4,35 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>计数器</title>
+  <title>React_Basic</title>
 </head>
 <body>
   <div id="root"></div>
-  
 
+  <script src="./lib/react.js"></script>
+  <script src="./lib/react-dom.js"></script>
+  <script src="./lib/babel.js"></script>
+
+  <script type="text/babel">
+    // 定义root根组件
+    class Root extends React.Component {
+      constructor() {
+        super()
+        this.state = {
+          message: '苏圳艺'
+        }
+      }
+
+      render() {
+        return (
+          <h2>{this.state.message}</h2>
+        )
+      }
+    }
+
+    const root = ReactDOM.createRoot(document.getElementById('root'))
+    root.render(<Root/>)
+
+  </script>
 </body>
 </html>

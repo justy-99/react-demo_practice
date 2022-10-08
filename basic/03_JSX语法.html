@@ -40,21 +40,27 @@
       constructor() {
         super()
         this.state = {
-          message: "Hello World"
+          message: "Hello World",
+          hobbies: ['唱','跳','rap']
         }
       }
 
       render() {
-        const { message } = this.state
+        const { message, hobbies } = this.state
 
         return (
           <div>
             <h2>{message}</h2>
             ==========子组件===========
             <Test value={message}/>
+            ===========测试============
+            <ul>
+              {hobbies.map( item => <li key={item}>{item}</li>)}
+            </ul>
           </div>
         )
       }
+
     }
 
     // 2.创建root并且渲染App组件

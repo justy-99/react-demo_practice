@@ -1,15 +1,18 @@
 import React, { Component } from 'react'
 import store from '../../redux/store'
+import { createDecrementAction,createIncrementAction } from '../../redux/count_action'
+
 export default class Count extends Component {
 
   increment = () => {
     const {value} = this.selectNumber
-    store.dispatch({type:'increment', data:value*1})
+    store.dispatch(createIncrementAction(value))
   }
 
   decrement = () => {
     const {value} = this.selectNumber
-    store.dispatch({type:'decrement', data: value*1})
+    // store.dispatch({type:'decrement', data: value*1})
+    store.dispatch(createDecrementAction(value*1))
   }
 
   incrementIfOdd = () => {
@@ -24,8 +27,6 @@ export default class Count extends Component {
 
 
   render() {
-    console.log('store',store);
-    
     return (
       <div>
         <h1>当前求和为{store.getState()}</h1>

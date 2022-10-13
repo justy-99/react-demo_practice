@@ -8,8 +8,8 @@ export default class Count extends Component {
   }
 
   decrement = () => {
-    // const {value} = this.selectNumber
-
+    const {value} = this.selectNumber
+    store.dispatch({type:'decrement', data: value*1})
   }
 
   incrementIfOdd = () => {

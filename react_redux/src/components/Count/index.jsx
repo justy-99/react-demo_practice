@@ -6,6 +6,7 @@ export default class Count extends Component {
 
   increment = () => {
     const {value} = this.selectNumber
+    // store.dispatch({type:'increment', data: value*1})
     store.dispatch(createIncrementAction(value))
   }
 

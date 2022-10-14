@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 // import store from '../../redux/store'
-import { createDecrementAction,createIncrementAction,createIncrementAsyncAction } from '../../redux/count_action'
+// import { createDecrementAction,createIncrementAction,createIncrementAsyncAction } from '../../redux/count_action'
 
 export default class Count extends Component {
 
@@ -19,9 +19,9 @@ export default class Count extends Component {
     this.props.jian(value*1)
   }
 
-  incrementIfOdd = () => {
-    // const {value} = this.selectNumber
-  }
+  // incrementIfOdd = () => {
+  //   // const {value} = this.selectNumber
+  // }
 
   incrementAsync = () => {
     const {value} = this.selectNumber
@@ -41,7 +41,7 @@ export default class Count extends Component {
 
         <button onClick={this.increment}>+</button>
         <button onClick={this.decrement}>-</button>
-        <button onClick={this.incrementIfOdd}>奇数再加</button>
+        {/* <button onClick={this.incrementIfOdd}>奇数再加</button> */}
         <button onClick={this.incrementAsync}>异步加</button>
       </div>
     )

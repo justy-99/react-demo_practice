@@ -8,16 +8,27 @@ import {
   createIncrementAsyncAction 
 } from '../../redux/count_action'
 
-function mapStateToProps(state) {
-  return {count: state}
-}
+// const mapStateToProps = state => ({count: state})
 
-function mapDispatchToProps(dispatch) {
-  return {
-    increment: number => dispatch(createIncrementAction(number)),
-    decrement: number => dispatch(createDecrementAction(number)),
-    incrementAsync:(number,time) => dispatch(createIncrementAsyncAction(number,time))
+// const mapDispatchToProps = dispatch => ({
+//   increment: number => dispatch(createIncrementAction(number)),
+//   decrement: number => dispatch(createDecrementAction(number)),
+//   incrementAsync:(number,time) => dispatch(createIncrementAsyncAction(number,time))
+// })
+
+
+export default connect(
+  state => ({count: state}),
+  // mapDispatchToProps一般写法 函数
+  // dispatch => ({
+  //   increment: number => dispatch(createIncrementAction(number)),
+  //   decrement: number => dispatch(createDecrementAction(number)),
+  //   incrementAsync:(number,time) => dispatch(createIncrementAsyncAction(number,time))
+  // })
+  // mapDispatchToProps一般写法精简写法 对象
+  {
+    increment: createIncrementAction,
+    decrement: createDecrementAction,
+    incrementAsync: createIncrementAsyncAction,
   }
-}
-
-export default connect(mapStateToProps,mapDispatchToProps)(CountUI)
+)(CountUI)

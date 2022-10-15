@@ -30,8 +30,6 @@ export default class Count extends Component {
   }
 
   render() {
-    console.log('props',this.props);
-    
     return (
       <div>
         {/* <h1>当前求和为{store.getState()}</h1> */}

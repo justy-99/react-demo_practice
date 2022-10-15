@@ -7,7 +7,7 @@ import {
   createDecrementAction,
   createIncrementAction,
   createIncrementAsyncAction 
-} from '../../redux/actions/count_action'
+} from '../../redux/actions/count'
 
 // const mapStateToProps = state => ({count: state})
 // const mapDispatchToProps = dispatch => ({
@@ -51,7 +51,7 @@ class CountUI extends Component {
 }
 
 export default connect(
-  state => ({count: state}),
+  state => ({count: state.count}),
   // mapDispatchToProps一般写法 函数
   // dispatch => ({
   //   increment: number => dispatch(createIncrementAction(number)),

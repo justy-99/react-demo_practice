@@ -45,13 +45,14 @@ class CountUI extends Component {
         <button onClick={this.increment}>+</button>
         <button onClick={this.decrement}>-</button>
         <button onClick={this.incrementAsync}>异步加</button>
+        <h2>下面有{this.props.person.length}人</h2>
       </div>
     )
   }
 }
 
 export default connect(
-  state => ({count: state.count}),
+  state => ({count: state.count,person: state.person}),
   // mapDispatchToProps一般写法 函数
   // dispatch => ({
   //   increment: number => dispatch(createIncrementAction(number)),

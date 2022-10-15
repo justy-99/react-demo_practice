@@ -1,3 +1,3 @@
 import { ADD_PERSON } from "../constant"
 
-export const createAddPersonAction = data => ({type: ADD_PERSON,data: data})
+export const createAddPersonAction = data => ({type: ADD_PERSON,data})

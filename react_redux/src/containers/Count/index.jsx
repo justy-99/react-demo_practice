@@ -14,9 +14,9 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    jia: number => dispatch(createIncrementAction(number)),
-    jian: number => dispatch(createDecrementAction(number)),
-    jiaAsync:(number,time) => dispatch(createIncrementAsyncAction(number,time))
+    increment: number => dispatch(createIncrementAction(number)),
+    decrement: number => dispatch(createDecrementAction(number)),
+    incrementAsync:(number,time) => dispatch(createIncrementAsyncAction(number,time))
   }
 }
 

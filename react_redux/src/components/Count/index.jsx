@@ -8,7 +8,7 @@ export default class Count extends Component {
     const {value} = this.selectNumber
     // store.dispatch({type:'increment', data: value*1})
     // store.dispatch(createIncrementAction(value*1))
-    this.props.jia(value*1)
+    this.props.increment(value*1)
 
   }
 
@@ -16,7 +16,7 @@ export default class Count extends Component {
     const {value} = this.selectNumber
     // store.dispatch({type:'decrement', data: value*1})
     // store.dispatch(createDecrementAction(value*1))
-    this.props.jian(value*1)
+    this.props.decrement(value*1)
   }
 
   // incrementIfOdd = () => {
@@ -26,12 +26,15 @@ export default class Count extends Component {
   incrementAsync = () => {
     const {value} = this.selectNumber
     // store.dispatch(createIncrementAsyncAction(value*1, 1000))
-    this.props.jiaAsync(value*1, 1000)
+    this.props.incrementAsync(value*1, 1000)
   }
 
   render() {
+    console.log('props',this.props);
+    
     return (
       <div>
+        {/* <h1>当前求和为{store.getState()}</h1> */}
         <h1>当前求和为{this.props.count}</h1>
         <select ref={ c => this.selectNumber = c}>
           <option value="1">1</option>

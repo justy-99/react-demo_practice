@@ -48,8 +48,9 @@ class PersonUI extends Component {
 }
 
 export default connect(
-  state => ({person:state.persons,count: state.count}),
-  {
-    addPerson
-  }
+  state => ({
+    person:state.persons,
+    count: state.count
+  }),
+  { addPerson }
 )(PersonUI)

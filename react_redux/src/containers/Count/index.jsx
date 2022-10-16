@@ -52,7 +52,10 @@ class CountUI extends Component {
 }
 
 export default connect(
-  state => ({count: state.count,person: state.persons}),
+  state => ({
+    count: state.count,
+    person: state.persons
+  }),
   // mapDispatchToProps一般写法 函数
   // dispatch => ({
   //   increment: number => dispatch(createIncrementAction(number)),
@@ -60,9 +63,5 @@ export default connect(
   //   incrementAsync:(number,time) => dispatch(createIncrementAsyncAction(number,time))
   // })
   // mapDispatchToProps一般写法精简写法 对象
-  {
-    increment,
-    decrement,
-    incrementAsync,
-  }
+  { increment, decrement, incrementAsync }
 )(CountUI)

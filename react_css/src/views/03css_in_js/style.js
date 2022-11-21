@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { largeSize,primaryColor } from "./style/variables";
 
 
 export const AppWrapper = styled.div`
@@ -39,3 +39,22 @@ export const AppWrapper = styled.div`
 // 1: "why"
 // 2: 18
 // length: 3
+export const SectionWrapper = styled.div.attrs(props => ({
+  tColor: props.color || "blue"
+}))`
+  border: 1px solid red;
+
+  .title {
+    font-size: ${props => props.size}px;
+    color: ${props => props.tColor};
+
+    &:hover {
+      background-color: purple;
+    }
+  }
+
+  .content {
+    font-size: ${largeSize}px;
+    color: ${primaryColor};
+  }
+`

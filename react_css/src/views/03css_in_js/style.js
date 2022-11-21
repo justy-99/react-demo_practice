@@ -14,6 +14,26 @@ export const AppWrapper = styled.div`
   }
 `
 
+export const SectionWrapper = styled.div.attrs(props => ({
+  tColor: props.color || "blue"
+}))`
+  border: 1px solid red;
+
+  .title {
+    font-size: ${props => props.size}px;
+    color: ${props => props.tColor};
+
+    &:hover {
+      background-color: purple;
+    }
+  }
+
+  .content {
+    font-size: ${largeSize}px;
+    color: ${primaryColor};
+  }
+`
+
 // ES6: 标签模板字符串
 // const name = "why"
 // const age = 18
@@ -39,22 +59,3 @@ export const AppWrapper = styled.div`
 // 1: "why"
 // 2: 18
 // length: 3
-export const SectionWrapper = styled.div.attrs(props => ({
-  tColor: props.color || "blue"
-}))`
-  border: 1px solid red;
-
-  .title {
-    font-size: ${props => props.size}px;
-    color: ${props => props.tColor};
-
-    &:hover {
-      background-color: purple;
-    }
-  }
-
-  .content {
-    font-size: ${largeSize}px;
-    color: ${primaryColor};
-  }
-`

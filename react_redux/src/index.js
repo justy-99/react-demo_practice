@@ -13,7 +13,7 @@ root.render(
   // </React.StrictMode>
 );
 // 订阅
-// store.subscribe(() => {
+// const unsubscribe = store.subscribe(() => {
 //   root.render(
 //     <React.StrictMode>
 //       <App />

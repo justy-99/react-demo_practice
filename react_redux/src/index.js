@@ -12,6 +12,7 @@ root.render(
     </Provider>
   // </React.StrictMode>
 );
+// 订阅
 // store.subscribe(() => {
 //   root.render(
 //     <React.StrictMode>
